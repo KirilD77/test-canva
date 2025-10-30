@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Demo Form</title>
+    <style>
+      :root {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: #f7f7f8;
+      }
+      .card {
+        max-width: 520px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px 24px;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 16px;
+      }
+      .row {
+        margin-bottom: 12px;
+      }
+      label {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #374151;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        outline: none;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+      }
+      .hint {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 6px;
+      }
+      button {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid #4f46e5;
+        background: #4f46e5;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        filter: brightness(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Quick Demo Form</h1>
+      <form
+        action="#"
+        method="post"
+        onsubmit="event.preventDefault(); alert('Submitted!');"
+      >
+        <div class="row">
+          <label for="fullName">Full Name</label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            placeholder="Jane Doe"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="jane@example.com"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <label for="age">Age</label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="1"
+            max="120"
+            placeholder="27"
+          />
+        </div>
+
+        <div class="row">
+          <label for="color">Favorite Color</label>
+          <select id="color" name="color">
+            <option value="">Choose…</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Orange</option>
+            <option>Purple</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="about">Short Bio</label>
+          <textarea
+            id="about"
+            name="about"
+            rows="3"
+            placeholder="Tell us something fun about you"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
